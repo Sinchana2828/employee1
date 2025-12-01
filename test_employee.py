@@ -1,18 +1,11 @@
-import pytest
+from employee import employee_details
 
-def employee_details(name, emp_id, department, salary):
-    result = (
-        f"Employee Name: {name}\n"
-        f"Employee ID: {emp_id}\n"
-        f"Employee department: {department}\n"
-        f"Salary: {salary}\n"
+def test_employee_details():
+    expected_output = (
+        "Employee Name: Alice\n"
+        "Employee ID: E1001\n"
+        "Employee department: IT\n"
+        "Salary: 55000\n"
     )
-    return result
 
-if __name__ == "__main__":
-    name = "Alice"
-    emp_id = "E1001"
-    department = "IT"
-    salary = 55000
-
-    print(employee_details(name, emp_id, department, salary))
+    assert employee_details("Alice", "E1001", "IT", 55000) == expected_output
