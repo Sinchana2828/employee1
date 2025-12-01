@@ -13,5 +13,4 @@ if __name__ == "__main__":
     emp_id = "E1001"
     department = "IT"
     salary = 55000
-
     print(employee_details(name, emp_id, department, salary))
